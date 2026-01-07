@@ -15,7 +15,7 @@ A modern admin dashboard application built with **Bun**, **Vite**, **React**, an
 
 ## Tech Stack
 
-- **Runtime**: Bun 1.1.38
+- **Runtime**: Bun 1.3.5 (target version)
 - **Build Tool**: Vite 7.3.0
 - **Framework**: React 19.2.3
 - **Language**: TypeScript 5.9.3
@@ -25,8 +25,8 @@ A modern admin dashboard application built with **Bun**, **Vite**, **React**, an
 
 ### Prerequisites
 
-- Bun 1.1.38 or higher
-- Node.js (for npm packages)
+- Bun 1.3.5 or higher (recommended)
+- Node.js 18+ (fallback for package installation if Bun has compatibility issues)
 
 ### Installation
 
@@ -36,14 +36,24 @@ git clone <repository-url>
 cd Buntest
 ```
 
-2. Install dependencies:
+2. Install dependencies with Bun (recommended):
+```bash
+bun install
+```
+
+Or use npm as a fallback:
 ```bash
 npm install
 ```
 
 ### Development
 
-Run the development server:
+Run the development server with Bun:
+```bash
+bun run dev
+```
+
+Or with npm:
 ```bash
 npm run dev
 ```
@@ -52,7 +62,12 @@ The application will be available at `http://localhost:5173/`
 
 ### Build
 
-Build for production:
+Build for production with Bun:
+```bash
+bun run build
+```
+
+Or with npm:
 ```bash
 npm run build
 ```
@@ -61,7 +76,12 @@ The built files will be in the `dist` directory.
 
 ### Preview
 
-Preview the production build:
+Preview the production build with Bun:
+```bash
+bun run preview
+```
+
+Or with npm:
 ```bash
 npm run preview
 ```
@@ -91,9 +111,13 @@ npm run preview
 
 ## Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+All scripts can be run with either Bun (recommended) or npm:
+
+- `bun run dev` / `npm run dev` - Start development server
+- `bun run build` / `npm run build` - Build for production
+- `bun run preview` / `npm run preview` - Preview production build
+
+**Note**: This project is designed to work with Bun 1.3.5. However, due to potential CPU compatibility issues on some systems, npm can be used as a fallback for package management while still benefiting from Vite's fast build times.
 
 ## License
 
